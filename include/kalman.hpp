@@ -4,6 +4,11 @@
 
 class kalman {
 public:
+
+    /*
+     * A larger value of Q indicates to trust the model less and the actual
+     * measurements more. Set R to around the variance of the sensor noise.
+     */
     kalman(double Q_, double R_) : Q(Q_), R(R_) {}
 
     double operator()(double U);

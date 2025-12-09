@@ -7,7 +7,14 @@
 
 #include "../include/kalman.hpp"
 
+/*
+ * The number of sensor readings to generate.
+ */
 const int VALS = 1e3;
+
+/*
+ * Sensor noise variance.
+ */
 const double EPS_SIGMA = 0.2;
 
 int main() {
