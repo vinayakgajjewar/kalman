@@ -4,12 +4,16 @@
 
 class kalman {
 public:
+    kalman(double Q_, double R_) : Q(Q_), R(R_) {}
+
     double operator()(double U);
+
 private:
+
     /*
-     * Noise covariance.
+     * Noise variance.
      */
-    double R = 40;
+    double R;
 
     /*
      * Measurement map scalar.
@@ -18,9 +22,9 @@ private:
     double H = 1.00;
 
     /*
-     * Initial estimated covariance.
+     * Process variance.
      */
-    double Q = 10;
+    double Q;
 
     /*
      * Initial error covariance.
